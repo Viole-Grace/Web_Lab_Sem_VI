@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1a</title>
+</head>
+<body>
+<script type="text/javascript">
+	function fixStart(st)
+	{
+		var s=st.split("");
+		for(var i=1;i<s.length;i++)
+			if(s[i]==s[0])
+				s[i]='*';
+		return s;
+	}
+	var senddata=window.prompt("Enter a string!");
+	alert("New string : "+fixStart(senddata).join(""));
+</script>
+</body>
+</html>
