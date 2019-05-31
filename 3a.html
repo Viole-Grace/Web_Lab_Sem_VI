@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>3a</title>
+</head>
+<body>
+<h3>Value : </h3>
+<script type="text/javascript">
+	function calc(num){this.n=num;}
+	calc.prototype.add=function(num){this.n=this.n+num; return this;}
+	calc.prototype.sub=function(num){this.n=this.n-num; return this;}
+	calc.prototype.mul=function(num){this.n=this.n*num; return this;}
+	calc.prototype.res=function(){document.write(this.n);}
+	var a = new calc(10).add(12).sub(10).mul(10).add(120).add(20).res()
+
+
+</script>
+
+</body>
+</html>
