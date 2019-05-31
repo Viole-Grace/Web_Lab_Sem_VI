@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>6a</title>
+</head>
+<script src="public/angular/angular.min.js"></script>
+<body ng-app ="myapp" ng-controller="myctrl">
+	<div ng-controller="myctrl">
+		Show HTML : <input type="checkbox" ng-model="myVar">
+		<div ng-show="myVar">
+			<h1>This is ng-show.</h1>
+			Enter name : <input ng-model="name">
+			<p><em><font face = "Comic Sans MS">Welcome, {{name}}</font></em></p>
+	</div>
+		
+	</div>
+<script type="text/javascript">
+	var myapp=angular.module("myapp" , []);
+	myapp.controller("myctrl" , function($scope)
+	{
+		$scope.name=""
+	});
+</script>
+</body>
+</html>
