@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2a</title>
+</head>
+<body>
+<script type="text/javascript">
+	function taxgetter(getval)
+	{
+		var val={p1:100, p2:200, p3:300, p4:400};
+		var amount=0
+		switch(getval)
+		{
+			case 'p1': amount=val.p1; break;
+			case 'p2': amount=val.p2; break;
+			case 'p3': amount=val.p3; break;
+			case 'p4': amount=val.p4; break;
+			default : alert("Invalid, choose from the list please!");
+		}
+		alert("Product value at base : "+amount);
+		function addtax()
+		{
+			return amount*1.18;
+		} return addtax();
+
+	}
+	var getval=window.prompt("ENTER product from the list : \n p1 , p2, p3, p4, p5");
+	alert("Item value after adding tax : "+taxgetter(getval));
+</script>
+</body>
+</html>
