@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>4a</title>
+	<h1>NG App</h1>
+</head>
+<script src="public/angular/angular.min.js"></script>
+<body ng-app ="myapp">
+<div ng-controller ="myctrl">
+<div>
+<h3>
+	Name : {{name}}<br>
+	Address : {{address}}<br>
+	Company : {{::company}}<br>
+</h3>
+</div>
+	Name:<span ng-bind="name"></span><br>
+	Address:<span ng-bind="address"></span><br>
+	Company: {{::company}}<br>
+	<button ng-click="change()">Click here to Change values!</button>
+</div>
+<script type="text/javascript">
+	var myapp=angular.module("myapp",[])
+	myapp.controller("myctrl", function($scope)
+	{
+		$scope.name=window.prompt("Enter Name")
+		$scope.address=window.prompt("Enter Address")
+		$scope.company=window.prompt("Enter Company")
+
+		$scope.change = function()
+		{
+			$scope.name=" Name changed!"
+			$scope.address=" Address changed!"
+			$scope.company=" Company not changed though. XD"
+		};
+	});
+</script>
+
+
+</body>
+</html>
