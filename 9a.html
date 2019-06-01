@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>9a</title>
+</head>
+<script src="public/angular/angular.min.js"></script>
+<body np-app ="">
+My favorite Book is :
+<select ng-model="booklist">
+	<option value="hp">Harry Potter
+	<option value="pj">Percy Jackson
+	<option value="tmiab">Three Men in a Boat
+</select>
+<hr>
+<div ng-switch="booklist">
+	<div ng-switch-when="hp">
+		<h1><font face="Georgia"><strong>Harry Potter!</strong></font></h1>
+		<p>A series of books that delve into the chaotic world of wizards and magic</p>			
+	</div>
+	<div ng-switch-when="pj">
+		<h1><font face="Georgia"><strong>Percy Jackson!</strong></font></h1>
+		<p>A series of books that delve into the chaotic world of Gods and Demigods, and their celestial tryst</p>
+	</div>
+	<div ng-switch-when="tmiab">
+		<h1><font face="Georgia"><strong>Three Men in a boat!</strong></font></h1>
+		<p>A marvelous little trip of three English men - and a dog - down what seems to be an epically weird journey down a river</p>
+	</div>
+	<div ng-switch-default>
+		<h1><font face="Georgia"><strong>It seems you have not yet selected anything!</strong></font></h1>
+	</div>
+</div>
+</body>
+</html>
